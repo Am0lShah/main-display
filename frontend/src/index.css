@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  /* Green Color Palette */
+  --primary-dark: #3E5F44;
+  --primary-medium: #5E936C;
+  --primary-light: #93DA97;
+  --primary-very-light: #E8FFD7;
+  
+  /* Additional derived colors */
+  --primary-dark-hover: #2d4a32;
+  --primary-medium-hover: #4a7a5a;
+  --primary-light-hover: #7bcb7f;
+  
+  /* Background colors */
+  --bg-primary: #f8faf8;
+  --bg-secondary: #ffffff;
+  --bg-accent: #f0f7f0;
+  
+  /* Text colors */
+  --text-primary: #1a2e1f;
+  --text-secondary: #4a5d4e;
+  --text-muted: #6b7a6d;
+  
+  margin: 0;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom utility classes */
+.bg-primary-dark { background-color: var(--primary-dark); }
+.bg-primary-medium { background-color: var(--primary-medium); }
+.bg-primary-light { background-color: var(--primary-light); }
+.bg-primary-very-light { background-color: var(--primary-very-light); }
+
+.text-primary-dark { color: var(--primary-dark); }
+.text-primary-medium { color: var(--primary-medium); }
+.text-primary-light { color: var(--primary-light); }
+
+.border-primary-dark { border-color: var(--primary-dark); }
+.border-primary-medium { border-color: var(--primary-medium); }
+.border-primary-light { border-color: var(--primary-light); }
+
+.hover\:bg-primary-dark:hover { background-color: var(--primary-dark-hover); }
+.hover\:bg-primary-medium:hover { background-color: var(--primary-medium-hover); }
+.hover\:bg-primary-light:hover { background-color: var(--primary-light-hover); }
+
+.hover\:text-primary-dark:hover { color: var(--primary-dark-hover); }
+.hover\:text-primary-medium:hover { color: var(--primary-medium-hover); }
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-accent);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-medium);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
