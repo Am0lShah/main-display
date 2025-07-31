@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:8000/api/v1/admin',
+  baseURL: 'https://kiosk-backend-14wu.onrender.com/api/v1/admin',
   headers: {
     'Authorization': `Bearer ${localStorage.getItem('token')}`
   }

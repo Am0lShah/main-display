@@ -3,7 +3,7 @@ import { io } from 'socket.io-client';
 let socket;
 
 export const connectSocket = (token) => {
-  socket = io('http://localhost:8000', {
+  socket = io('https://kiosk-backend-14wu.onrender.com', {
     auth: { token,name:'amol',groupName:'xxxx' },
     transports: ['websocket', 'polling'], // Enable fallback
     reconnectionAttempts: 3,
