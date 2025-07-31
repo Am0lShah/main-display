@@ -31,9 +31,9 @@ function App() {
   
 
   const fetchTextNotice= async(name)=>{
-    const res= await axios.get(`http://localhost:8000/api/v1/admin/devices/notices/${name}`)
+    const res= await axios.get(`https://kiosk-backend-14wu.onrender.com/api/v1/admin/devices/notices/${name}`)
 
-    console.log(res);
+    //console.log(res);
     setTextNotice(res.data.messages);
     setRegularNotice(true);
   }
@@ -42,9 +42,9 @@ function App() {
   
 
   const fetchImageNotice= async(name)=>{
-    const res= await axios.get(`http://localhost:8000/api/v1/admin/devices/notices-image-video/${name}`)
+    const res= await axios.get(`https://kiosk-backend-14wu.onrender.com/api/v1/admin/devices/notices-image-video/${name}`)
 
-    console.log(res);
+    //console.log(res);
     setImageNotice(res.data.messages);
   }
 
@@ -60,7 +60,7 @@ function App() {
 
   // Join socket AFTER form is submitted
   const connectSocket = (name) => {
-    socket = io('http://localhost:8000', {
+    socket = io('https://kiosk-backend-14wu.onrender.com', {
       auth: { name, groupName: 'xxxx' },
       transports: ['websocket', 'polling'],
       reconnectionAttempts: 3,
